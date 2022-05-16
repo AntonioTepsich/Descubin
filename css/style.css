@@ -2,8 +2,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -11,9 +12,10 @@ html {
 }
 
 .navbar {
-  background-color: rgb(37, 35, 35);
+  background-color: #252323;
   z-index: 1000;
 }
+
 .navbar .navbar-brand {
   font-size: 1.5rem;
   font-weight: 700;
@@ -47,11 +49,19 @@ html {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
+
 .mid video {
   width: 100%;
   height: 100%;
@@ -61,17 +71,21 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
+
 .mid .hero {
   position: relative;
 }
+
 .mid .hero p {
   width: 55%;
   font-size: 1.1rem;
   letter-spacing: 0.2px;
   padding-bottom: 1rem;
 }
+
 .mid .hero a {
   background: #00BF85;
   font-weight: 600;
@@ -79,6 +93,7 @@ html {
   border-radius: 30px;
   text-decoration: none;
 }
+
 .mid .hero a:hover {
   background: rgba(255, 255, 255, 0.774);
 }
@@ -86,31 +101,45 @@ html {
 .about {
   background: #000;
 }
-.about .text {
+
+.about .text, .about .sign .text .text h2, .sign .text .text .about h2, .about .discovery .text h2, .discovery .text .about h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: auto;
 }
-.about .text h6 {
+
+.about .text h6, .discovery .text .about h2 h6 {
   color: #00BF85;
   font-weight: 800;
   font-size: 1rem;
   letter-spacing: 2px;
 }
-.about .text h2 {
+
+.about .text h2, .discovery .text .about h2 h2 {
   color: #f7f5f4;
   font-weight: 700;
   font-size: 2.7rem;
 }
-.about .text p {
+
+.about .text p, .discovery .text .about h2 p {
   color: #f7f5f4;
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
-.about .text a {
+
+.about .text a, .discovery .text .about h2 a {
   background: #00BF85;
   font-weight: 600;
   padding: 0.6rem 1.4rem;
@@ -118,34 +147,46 @@ html {
   text-decoration: none;
   color: #111;
 }
-.about .text a:hover {
+
+.about .text a:hover, .discovery .text .about h2 a:hover {
   background: rgba(255, 255, 255, 0.774);
 }
 
-.discovery .text {
+.discovery .text, .discovery .text h2 .text, .sign .text .text, .discovery .text h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin: auto;
 }
-.discovery .text h6 {
+
+.discovery .text h6, .sign .text .text h6 {
   color: #00BF85;
   font-weight: 800;
   font-size: 1rem;
   letter-spacing: 2px;
 }
-.discovery .text h2 {
+
+.sign .text .text h2, .discovery .text h2 {
   color: #111;
-  font-weight: 700;
-  font-size: 2.7rem;
 }
-.discovery .text p {
+
+.discovery .text p, .sign .text .text p {
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
-.discovery .text a {
+
+.discovery .text a, .sign .text .text a {
   background: #111;
   font-weight: 500;
   padding: 0.6rem 1.4rem;
@@ -153,57 +194,33 @@ html {
   text-decoration: none;
   color: #fff;
 }
-.discovery .text a:hover {
+
+.discovery .text a:hover, .sign .text .text a:hover {
   background: #00BF85;
 }
 
 .service {
   background: #000;
 }
+
 .service .one {
   background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   padding: 2rem 1.5rem;
   border-radius: 5px;
-}
-
-.sign .text {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin: auto;
-}
-.sign .text h6 {
-  color: #00BF85;
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 2px;
-}
-.sign .text h2 {
-  color: #111;
-  font-weight: 700;
-  font-size: 2.7rem;
-}
-.sign .text p {
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-.sign .text a {
-  background: #111;
-  font-weight: 500;
-  padding: 0.6rem 1.4rem;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #fff;
-}
-.sign .text a:hover {
-  background: #00BF85;
 }
 
 body > footer {
@@ -216,6 +233,7 @@ body > footer {
   position: static;
   height: 100vh;
 }
+
 .login .box {
   width: 320px;
   height: 420px;
@@ -224,10 +242,13 @@ body > footer {
   top: 60%;
   left: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 70px 30px;
 }
+
 .login .box .avatar {
   width: 100px;
   height: 100px;
@@ -237,23 +258,27 @@ body > footer {
   top: -50px;
   left: calc(50% - 50px);
 }
+
 .login .box h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
 }
+
 .login .box label {
   margin: 0;
   padding: 0;
   font-weight: bold;
   display: block;
 }
+
 .login .box input {
   width: 100%;
   margin-bottom: 20px;
 }
-.login .box input[type=text], .login .box input[type=password] {
+
+.login .box input[type="text"], .login .box input[type="password"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -262,7 +287,8 @@ body > footer {
   color: #fff;
   font-size: 16px;
 }
-.login .box input[type=submit] {
+
+.login .box input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
@@ -271,16 +297,21 @@ body > footer {
   border-radius: 30px;
   font-weight: 600;
 }
-.login .box input[type=submit]:hover {
+
+.login .box input[type="submit"]:hover {
   background: rgba(255, 255, 255, 0.774);
 }
+
 .login .box a {
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
   color: darkgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .register {
@@ -288,6 +319,7 @@ body > footer {
   margin-top: 78px;
   color: #f7f5f4;
 }
+
 .register .btn {
   font-weight: 400;
   padding: 1rem 2rem;
@@ -295,9 +327,11 @@ body > footer {
   min-width: 10rem;
   background: #00BF85;
 }
+
 .register .btn:hover {
   background: #f7f5f4 transparent;
 }
+
 .register .pepe {
   font-weight: 500;
   padding: 1rem 2rem;
@@ -305,12 +339,15 @@ body > footer {
   min-width: 10rem;
   background: #00BF85;
 }
+
 .register .pepe:hover {
   background: #f7f5f4;
 }
+
 .register .btn-outline-dark {
   border: 2px solid #111;
 }
+
 .register .form-control {
   background-color: darkgrey;
   border: 2px solid #111;
@@ -333,4 +370,5 @@ body > footer {
 .testimonial {
   bottom: 10px;
   color: #000;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

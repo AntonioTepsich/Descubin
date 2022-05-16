@@ -1,5 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@mixin shape {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: auto;
+}
+
+$colores: (
+    verde: #00BF85,
+    blanco: #fff,
+    crema: #f7f5f4,
+    negro: #000,
+    oscuro: #111,
+);
+
+
 *{
     margin: 0;
     padding: 0;
@@ -22,18 +39,18 @@ html{
 }
 
 #navbarSupportedContent > ul > li:nth-child(n) > a{
-    color: #fff;
+    color: map-get($map: $colores, $key: blanco);
     margin: 0.8rem;
     font-size: 1.1rem;
     padding: 0 0.8rem;
 }
 
 #navbarSupportedContent > ul > li:nth-child(n) > a:hover{
-    color: #00BF85;
+    color: map-get($map: $colores, $key: verde);
 }
 
 #navbarSupportedContent > a{
-    background: #00BF85;
+    background: map-get($map: $colores, $key: verde);
     font-weight: 600;
     padding: 0.4rem 1.4rem;
     border-radius: 30px;
@@ -42,7 +59,7 @@ html{
 }
 
 #navbarSupportedContent > a:hover{
-    background: #f7f5f4;
+    background: map-get($map: $colores, $key: crema);
 }
 
 .mid{
@@ -76,7 +93,7 @@ html{
         }
 
         a{
-            background: #00BF85;
+            background: map-get($map: $colores, $key: verde);
             font-weight: 600;
             padding: 0.6rem 1.4rem;
             border-radius: 30px;
@@ -90,42 +107,38 @@ html{
 }
 
 .about{
-    background: #000;
+    background: map-get($map: $colores, $key: negro);
 
     .text{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: auto;
+        @include shape;
 
         h6{
-            color: #00BF85;
+            color: map-get($map: $colores, $key: verde);
             font-weight: 800;
             font-size: 1rem;
             letter-spacing: 2px;
         }
 
         h2{
-            color: #f7f5f4;
+            color: map-get($map: $colores, $key: crema);
             font-weight: 700;
             font-size: 2.7rem;
         }
 
         p{
-            color: #f7f5f4;
+            color: map-get($map: $colores, $key: crema);
             font-weight: 400;
             font-size: 1.1rem;
             letter-spacing: 0.5px;
         }
 
         a{
-            background: #00BF85;
+            background: map-get($map: $colores, $key: verde);
             font-weight: 600;
             padding: 0.6rem 1.4rem;
             border-radius: 30px;
             text-decoration: none;
-            color: #111;
+            color: map-get($map: $colores, $key: oscuro);
         }
 
         a:hover{
@@ -134,51 +147,48 @@ html{
     }
 }
 
-.discovery .text{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: auto;
+.discovery{ 
+    .text{
+        @include shape;
 
-    h6{
-        color: #00BF85;
-        font-weight: 800;
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
+        h6{
+            color: map-get($map: $colores, $key: verde);
+            font-weight: 800;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
 
-    h2{
-        color: #111;
-        font-weight: 700;
-        font-size: 2.7rem;
-    }
+        h2{
+            @extend #{".discovery",".text", "h2"};
+            color: map-get($map: $colores, $key: oscuro);
+        }
 
-    p{
-        font-weight: 400;
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
-    }
+        p{
+            font-weight: 400;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
 
-    a{
-        background: #111;
-        font-weight: 500;
-        padding: 0.6rem 1.4rem;
-        border-radius: 30px;
-        text-decoration: none;
-        color: #fff;
-    }
+        a{
+            background: map-get($map: $colores, $key: oscuro);
+            font-weight: 500;
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            text-decoration: none;
+            color: map-get($map: $colores, $key: blanco);
+        }
 
-    a:hover{
-        background: #00BF85;
+        a:hover{
+            background: map-get($map: $colores, $key: verde);
+        }
     }
 }
 
 .service {
-    background: #000;
+    background: map-get($map: $colores, $key:negro);
 
     .one{
-        background: #fff;
+        background: map-get($map: $colores, $key: blanco);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -189,43 +199,9 @@ html{
     }
 }
 
-.sign .text{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: auto;
-
-    h6{
-        color: #00BF85;
-        font-weight: 800;
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-
-    h2{
-        color: #111;
-        font-weight: 700;
-        font-size: 2.7rem;
-    }
-
-    p{
-        font-weight: 400;
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
-    }
-
-    a{
-        background: #111;
-        font-weight: 500;
-        padding: 0.6rem 1.4rem;
-        border-radius: 30px;
-        text-decoration: none;
-        color: #fff;
-    }
-
-    a:hover{
-        background: #00BF85;
+.sign {
+    .text{
+        @extend .discovery;
     }
 }
 
@@ -243,7 +219,7 @@ body > footer{
         width: 320px;
         height: 420px;
         background: rgba(17, 17, 17, 0.952);
-        color:#fff;
+        color:map-get($map: $colores, $key: blanco);
         top: 60%;
         left: 50%;
         position: absolute;
@@ -282,11 +258,11 @@ body > footer{
     
         input[type="text"],input[type="password"]{
             border: none;
-            border-bottom: 1px solid #fff;
+            border-bottom: 1px solid map-get($map: $colores, $key: blanco);
             background: transparent;
             outline: none;
             height: 40px;
-            color: #fff;
+            color: map-get($map: $colores, $key: blanco);
             font-size: 16px;
         }
 
@@ -294,8 +270,8 @@ body > footer{
             border: none;
             outline: none;
             height: 40px;
-            background: #00BF85;
-            color: #111;
+            background: map-get($map: $colores, $key: verde);
+            color: map-get($map: $colores, $key: oscuro);
             border-radius: 30px;
             font-weight: 600;
         }
@@ -318,18 +294,18 @@ body > footer{
 .register{
     background: rgba(17, 17, 17, 0.952);
     margin-top: 78px;
-    color:#f7f5f4;
+    color:map-get($map: $colores, $key: crema);
 
     .btn{
         font-weight: 400;
         padding: 1rem 2rem;
         border-radius: 5rem;
         min-width: 10rem;
-        background: #00BF85;    
+        background: map-get($map: $colores, $key: verde);  
     }
 
     .btn:hover{
-        background: #f7f5f4 transparent;
+        background: map-get($map: $colores, $key: crema) transparent;
     }
 
     .pepe{
@@ -337,20 +313,20 @@ body > footer{
         padding: 1rem 2rem;
         border-radius: 5rem;
         min-width: 10rem;
-        background: #00BF85;
+        background: map-get($map: $colores, $key: verde);
     }
 
     .pepe:hover{
-        background: #f7f5f4;
+        background: map-get($map: $colores, $key: crema);
     }
 
     .btn-outline-dark{
-        border: 2px solid #111;
+        border: 2px solid map-get($map: $colores, $key: oscuro);
     }
 
     .form-control {
         background-color:darkgrey;
-        border: 2px solid #111;
+        border: 2px solid map-get($map: $colores, $key: oscuro);
         border-radius: 5rem;
         padding: 1.5rem 1rem;
     }
@@ -370,5 +346,5 @@ body > footer{
 
 .testimonial {
     bottom: 10px;
-    color: #000;
+    color: map-get($map: $colores, $key: negro);
 }
