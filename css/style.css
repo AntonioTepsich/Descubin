@@ -102,7 +102,7 @@ html {
   background: #000;
 }
 
-.about .text, .about .sign .text .text h2, .sign .text .text .about h2, .about .discovery .text h2, .discovery .text .about h2 {
+.about .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,27 +119,27 @@ html {
   margin: auto;
 }
 
-.about .text h6, .discovery .text .about h2 h6 {
+.about .text h6 {
   color: #00BF85;
   font-weight: 800;
   font-size: 1rem;
   letter-spacing: 2px;
 }
 
-.about .text h2, .discovery .text .about h2 h2 {
+.about .text h2 {
   color: #f7f5f4;
   font-weight: 700;
   font-size: 2.7rem;
 }
 
-.about .text p, .discovery .text .about h2 p {
+.about .text p {
   color: #f7f5f4;
   font-weight: 400;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
 
-.about .text a, .discovery .text .about h2 a {
+.about .text a {
   background: #00BF85;
   font-weight: 600;
   padding: 0.6rem 1.4rem;
@@ -148,11 +148,33 @@ html {
   color: #111;
 }
 
-.about .text a:hover, .discovery .text .about h2 a:hover {
+.about .text a:hover {
   background: rgba(255, 255, 255, 0.774);
 }
 
-.discovery .text, .discovery .text h2 .text, .sign .text .text, .discovery .text h2 {
+.discovery .text h6, .sign .text h6 {
+  color: #00BF85;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.discovery .text p, .sign .text p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.discovery .text a, .sign .text a {
+  background: #00BF85;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #111;
+}
+
+.discovery .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,33 +191,17 @@ html {
   margin: auto;
 }
 
-.discovery .text h6, .sign .text .text h6 {
-  color: #00BF85;
-  font-weight: 800;
-  font-size: 1rem;
-  letter-spacing: 2px;
-}
-
-.sign .text .text h2, .discovery .text h2 {
+.discovery .text h2 {
   color: #111;
 }
 
-.discovery .text p, .sign .text .text p {
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-.discovery .text a, .sign .text .text a {
+.discovery .text a {
   background: #111;
   font-weight: 500;
-  padding: 0.6rem 1.4rem;
-  border-radius: 30px;
-  text-decoration: none;
   color: #fff;
 }
 
-.discovery .text a:hover, .sign .text .text a:hover {
+.discovery .text a:hover {
   background: #00BF85;
 }
 
@@ -221,6 +227,37 @@ html {
   text-align: center;
   padding: 2rem 1.5rem;
   border-radius: 5px;
+}
+
+.sign .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto;
+}
+
+.sign .text h2 {
+  color: #111;
+}
+
+.sign .text a {
+  background: #111;
+  font-weight: 500;
+  color: #fff;
+}
+
+.sign .text a:hover {
+  background: #00BF85;
 }
 
 body > footer {

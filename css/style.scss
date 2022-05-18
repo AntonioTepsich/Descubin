@@ -147,34 +147,42 @@ html{
     }
 }
 
+%h6{
+    color: map-get($map: $colores, $key: verde);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+%p{
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+%a {
+    background: map-get($map: $colores, $key: verde);
+    font-weight: 600;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    text-decoration: none;
+    color: map-get($map: $colores, $key: oscuro);
+}
+
 .discovery{ 
     .text{
         @include shape;
 
-        h6{
-            color: map-get($map: $colores, $key: verde);
-            font-weight: 800;
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
+        h6{@extend %h6;}
 
-        h2{
-            @extend #{".discovery",".text", "h2"};
-            color: map-get($map: $colores, $key: oscuro);
-        }
+        h2{color: map-get($map: $colores, $key: oscuro);}
 
-        p{
-            font-weight: 400;
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
-        }
+        p{@extend %p;}
 
         a{
+            @extend %a;
             background: map-get($map: $colores, $key: oscuro);
             font-weight: 500;
-            padding: 0.6rem 1.4rem;
-            border-radius: 30px;
-            text-decoration: none;
             color: map-get($map: $colores, $key: blanco);
         }
 
@@ -201,7 +209,24 @@ html{
 
 .sign {
     .text{
-        @extend .discovery;
+        @include shape;
+
+        h6{@extend %h6;}
+
+        h2{color: map-get($map: $colores, $key: oscuro);}
+
+        p{@extend %p;}
+
+        a{
+            @extend %a;
+            background: map-get($map: $colores, $key: oscuro);
+            font-weight: 500;
+            color: map-get($map: $colores, $key: blanco);
+        }
+
+        a:hover{
+            background: map-get($map: $colores, $key: verde);
+        }
     }
 }
 
